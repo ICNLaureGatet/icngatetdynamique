@@ -146,7 +146,7 @@ $(function(){
         $('#blocPage').html(newContent)
 
         if(titre == 'Œuvre d\'art optique'){
-            $('#blocPage').after('<script src="js/traitementImage.js" id="scriptTraitementImage"></script>')
+            $('#blocPage').after('<script src="javascripts/traitementImage.js" id="scriptTraitementImage"></script>')
         } else {
             $('#scriptTraitementImage').remove()
         }
