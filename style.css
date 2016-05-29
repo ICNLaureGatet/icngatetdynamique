@@ -1,10 +1,10 @@
 ﻿@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular - Police téléchargée sur http://www.fontsquirrel.com/ */
     font-family: 'Policetitre';
-    src: url('font/journal-webfont.eot');
-    src: url('font/journal-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/journal-webfont.woff') format('woff'),
-         url('font/journal-webfont.ttf') format('truetype'),
-         url('font/journal-webfont.svg#LearningCurveProRegular') format('svg');
+    src: url('fonts/journal-webfont.eot');
+    src: url('fonts/journal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/journal-webfont.woff') format('woff'),
+         url('fonts/journal-webfont.ttf') format('truetype'),
+         url('fonts/journal-webfont.svg#LearningCurveProRegular') format('svg');
 }
 html,body
 {
