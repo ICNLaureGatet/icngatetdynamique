@@ -138,6 +138,24 @@ $(function(){
                 newContent += '</ul>'
                 newContent += '<p>Ce type de projet pourrait être développé dans un autre domaine, en physique par exemple, avec la réalisation d\'un mobile reproduisant le mouvement des planètes.</p>'
             break
+			case 'Organisation année 2016-2017':
+				newContent = '<h2>Organisation de l\'année 2016-2017</h2>'
+				newContent += '<p>L\'année s\'articule en 4 blocs : <ul class="liste_module">'
+				newContent += '<li class="listePrincipale">Participation aux concours Castor-informatique - Algorea</li>'
+				newContent += '<p class="paragraphe">Après deux entrainements, les élèves ont passé le coucours Castor-informatique (<a href="http://castor-informatique.fr" target=\'_blank\'>Concours Castor</a>).</br> Ce concours, ouvert à tous les niveaux, vise à faire découvrir aux élèves l\'informatique et les sciences du numérique.</p>'
+				newContent += '<section class=\'blocTexte\'><p>À l\'issue de cette épreuve, les élèves les plus méritants sont inscrits au concours <a href=\'http://www.algorea.org/\' target=\'_blank\'>Algoréa</a>, concours orienté sur la programmation.</br> Trois langages sont utilisables cette année : Blockly, Scratch ou Python.</br> Voici un exemple de ce qui peut être demandé sur Blockly :</p></section>'
+				newContent += '<aside class=\'imageDroite\'><a href=\'images/algorea.PNG\'><img src="images/algoreaDiapo.PNG" alt=\'Algorea Blockly\' title=\'Algorea Blockly\'></a></aside>'
+				newContent += '<li class="listePrincipale">Programmation par blocs - Blockly</li>'
+				newContent += '<p class=\'paragraphe\'>Blockly est un langage de programmation visuel, il s\'inspire du projet App Inventor développé par Google.</br> Site de développement du langage : <a href=\'http://developers.google.com/blockly/\' target=\'_blank\'>http://developers.google.com/blockly/</a></br> On se sert d\'une interface Web intégrant une forme plus ou moins complète :'
+				newContent += '<ul class="sous_liste"><li> <a href=\'http://raffinat.perso.univ-pau.fr/blockly/sophus/\' target=\'_blank\'>http://raffinat.perso.univ-pau.fr/blockly/sophus/</a></li><li> <a href=\'http://irem.univ-reunion.fr/spip.php?rubrique173\' target=\'_blank\'>http://irem.univ-reunion.fr/spip.php?rubrique173</a></li><li> On peut aussi intégrer le programme dans une interface locale</li></ul></p>'
+				newContent += '<section class=\'blocTexte\'><p>Nous avons, par exemple, réalisé la table de multiplication par 5 :</p></section>'
+				newContent += '<aside class=\'imageDroite\'><a href=\'images/blocklyTable5.PNG\'><img src=\'images/blocklyTable5Diapo.PNG\' alt=\'Blockly - Table 5\' title=\'Blockly - Table 5\'></a></aside>'
+				newContent += '<li class="listePrincipale">Création d\'applications sur Androïd</li>'
+				newContent += '<p class=\'paragraphe\'>On se connecte à l\'application <a href=\'http://ai2.appinventor.mit.edu\' target=\'_blank\'>AppInventor</a> à l\'aide d\'un compte Google.</br> Elle nous donne des outils accessibles aux élèves permettant de créer des applications pour le système d\'exploitation Androïd.</br> Une interface graphique permet de déposer et d\'organiser des éléments et une interface de développement par blocs permet de programmer des actions.</br> Un émulateur disponible à l\'adresse <a href=\'https://sourceforge.net/projects/ai2u/\' target=\'_blank\'>https://sourceforge.net/projects/ai2u/</a> permet de tester ses applications sans téléphone.</p>'
+				newContent += '<div><a href=\'images/AppInventor.PNG\'><img src="images/AppInventorDiapo.PNG" alt=\'AppInventor\' title=\'AppInventor\'></a><a href=\'images/Emulateur.PNG\'><img src="images/EmulateurDiapo.PNG" alt=\'Emulateur\' title=\'Emulateur\'></a></div></p>'
+				newContent += '<li class="listePrincipale">Développement d\'un site Web</li>'
+				newContent += '<p>Le travail sur les licences libres réalisé au cours de la programmation sur AppInventor sera mise en forme au format HTML5/CSS3.</br> En fin d\'année, une initiation à Javascript sera proposé.</p>'
+			break
             default:
                 //Présentation ICN
                 newContent = contenuInit
