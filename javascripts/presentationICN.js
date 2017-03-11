@@ -154,7 +154,7 @@ $(function(){
 				newContent += '<p class=\'paragraphe\'>On se connecte à l\'application <a href=\'http://ai2.appinventor.mit.edu\' target=\'_blank\'>AppInventor</a> à l\'aide d\'un compte Google.</br> Elle nous donne des outils accessibles aux élèves permettant de créer des applications pour le système d\'exploitation Androïd.</br> Une interface graphique permet de déposer et d\'organiser des éléments et une interface de développement par blocs permet de programmer des actions.</br> Un émulateur disponible à l\'adresse <a href=\'https://sourceforge.net/projects/ai2u/\' target=\'_blank\'>https://sourceforge.net/projects/ai2u/</a> permet de tester ses applications sans téléphone.</p>'
 				newContent += '<div><a href=\'images/AppInventor.PNG\'><img src="images/AppInventorDiapo.PNG" alt=\'AppInventor\' title=\'AppInventor\'></a><a href=\'images/Emulateur.PNG\'><img src="images/EmulateurDiapo.PNG" alt=\'Emulateur\' title=\'Emulateur\'></a></div></p>'
 				newContent += '<li class="listePrincipale">Développement d\'un site Web</li>'
-				newContent += '<p>Le travail sur les licences libres réalisé au cours de la programmation sur AppInventor sera mise en forme au format HTML5/CSS3.</br> En fin d\'année, une initiation à Javascript sera proposé.</p>'
+				newContent += '<p>Le travail sur les licences libres réalisé au cours de la programmation sur AppInventor sera mise en forme au format HTML5/CSS3.</br> En fin d\'année, une initiation à Javascript sera proposée.</p>'
 			break
             default:
                 //Présentation ICN
