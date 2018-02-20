@@ -1,8 +1,12 @@
 $(function(){
-    var pageVisitees = []
-    $('a').css('color', 'blue')
+	//gestion de la hauteur du bandeau :
+	var pageVisitees = []
+    afficheNewPage('Présentation ICN',function(){
+		$('#bandeau').css('height',$('#blocPage').outerHeight(true))
+	})
+	$('a').css('color', 'blue')
     //je gère ici le survol des liens du menu navigation
-    $('#bandeau>nav>ul>li').css('padding-bottom', '8px')
+    $('#bandeau>nav>ul>li').css('padding-bottom', '1px')
     $('li>a').on ('mouseover', function(){
         $(this).css('border', '2px rgb(0,100,150) dotted')
         $(this).css('border-radius', '5px')
@@ -26,10 +30,12 @@ $(function(){
     var contenuInit = $('#blocPage').html()
     $('li>a').on('click', function(){
         var titrePage = $(this).text()
-        afficheNewPage(titrePage)
+        afficheNewPage(titrePage,function(){
+			$('#bandeau').css('height',$('#blocPage').outerHeight(true))
+        })
 
     })
-    function afficheNewPage(titre){
+    function afficheNewPage(titre,callback){
         var newContent
         if(pageVisitees.indexOf(titre)==-1)pageVisitees.push(titre)
         switch(titre){
@@ -154,19 +160,41 @@ $(function(){
 				newContent += '<p class=\'paragraphe\'>On se connecte à l\'application <a href=\'http://ai2.appinventor.mit.edu\' target=\'_blank\'>AppInventor</a> à l\'aide d\'un compte Google.</br> Elle nous donne des outils accessibles aux élèves permettant de créer des applications pour le système d\'exploitation Androïd.</br> Une interface graphique permet de déposer et d\'organiser des éléments et une interface de développement par blocs permet de programmer des actions.</br> Un émulateur disponible à l\'adresse <a href=\'https://sourceforge.net/projects/ai2u/\' target=\'_blank\'>https://sourceforge.net/projects/ai2u/</a> permet de tester ses applications sans téléphone.</p>'
 				newContent += '<div><a href=\'images/AppInventor.PNG\'><img src="images/AppInventorDiapo.PNG" alt=\'AppInventor\' title=\'AppInventor\'></a><a href=\'images/Emulateur.PNG\'><img src="images/EmulateurDiapo.PNG" alt=\'Emulateur\' title=\'Emulateur\'></a></div></p>'
 				newContent += '<li class="listePrincipale">Développement d\'un site Web</li>'
-				newContent += '<p>Le travail sur les licences libres réalisé au cours de la programmation sur AppInventor sera mise en forme au format HTML5/CSS3.</br> En fin d\'année, une initiation à Javascript sera proposée.</p>'
+                newContent += '<div><p class=\'paragraphe\'>Création d\'un jeu.</br>La seule contrainte était de créer un chronomètre à intégrer dans le jeu :</p><img src="images/ChronoInit.PNG" alt=\'Chronomètre\' title=\'Initialisation\'><img src="images/ChronoActif.PNG" alt=\'Chronomètre Actif\' title=\'Activé\'></div>'
+				newContent += '<p>Mise en forme au format HTML5/CSS3 du travail sur les licences libres réalisé au cours de la programmation sur AppInventor.</br>L\'objectif est d\'initier les élèves à la conception d\'une page Web "à la main" avec l\'organisation en fichiers disjoints (le contenu et la mise en forme).</br>Un groupe plus avancé dans le traval précédent a pu s\'initier au langage javascript : programmation intégrée dans une page Web.</p>'
 			break
+            case 'Organisation année 2017-2018':
+                newContent = '<h2>Organisation de l\'année 2017-2018</h2>'
+                newContent += '<p>L\'année s\'articule en 5 blocs :'
+                newContent += '<ul class="liste_module">'
+                newContent += '<li class="listePrincipale">Travail sous Scratch - Prolongement du travail fait au collège</li>'
+                newContent += '<p class="paragraphe">Les élèves ont conçu un programme permettant de construire des polygones réguliers puis un cercle (création de blocs).</br>Le travail s\'est terminé par la création de camemberts.</p>'
+                newContent += '<div class="divCentree"><img src="images/camembert1.PNG" alt="Scratch - camembert1" title="10 parts"><img src="images/camembert2.PNG" alt="Scratch - camembert2" title="20 parts"></div>'
+                newContent += '<li class="listePrincipale">Participation aux concours Castor-informatique - Algorea</li>'
+                newContent += '<p class="paragraphe">Après deux entrainements, les élèves ont passé le coucours Castor-informatique (<a href="http://castor-informatique.fr" target="_blank">Concours Castor</a>).</br>Ce concours, ouvert à tous les niveaux, vise à faire découvrir aux élèves l\'informatique et les sciences du numérique.</p>'
+                newContent += '<section class="blocTexte"><p>À l\'issue de cette épreuve, les élèves ont pu se confronter à <a href="http://www.algorea.org/" target="_blank">Algoréa</a>, concours orienté sur la programmation.</br>Trois langages sont utilisables cette année : Blockly, Scratch ou Python.</br>Voici un exemple de ce qui peut être demandé sur Blockly :</p></section>'
+                newContent += '<aside class="imageDroite"><a href="images/algorea.PNG"><img src="images/algoreaDiapo.PNG" alt="Algorea Blockly" title="Algorea Blockly"></a></aside>'
+                newContent += '<section class="blocTexte"><p>Suivant la réussite au concours Castor, Algoréa propose un niveau adapté aux élèves.</p></section>'
+                newContent += '<li class="listePrincipale">Travaux sous Python</li>'
+                newContent += '<p>Découverte du langage fonctionnel propre à ce langage (utilisé en mathématiques).</br>Application dans l\'utilisation de <a hrep="http://dichotomies.fr/2011/infomath/guides/python/installation-rurple/?fichier=rurple.msi">Rurple</a>. </br>Création de programmes impliquant les boucles pour déplacer le robot suivant un parcours défini : </br></p>'
+                newContent += '<div class="divCentree"><img src="images/escalier.PNG" alt="Rurple - escalier" title="escalier"><img src="images/spirale.PNG" alt="Rurple - spirale" title="spirale"></div>'
+                newContent += '<li class="listePrincipale">Développement d\'un site Web</li>'
+                newContent += '<p>Mise en forme au format HTML5/CSS3 d\'un travail de recherche sur des métiers du numérique, les licences Creative Commons et sur différents formats d\'images numériques.</p>'
+                newContent += '<li class="listePrincipale">Création d\'applications sur Androïd</li>'
+                newContent += '<p class="paragraphe">On se connecte à l\'application <a href="http://ai2.appinventor.mit.edu" target="_blank">AppInventor</a> à l\'aide d\'un compte Google.</br>Elle nous donne des outils accessibles aux élèves permettant de créer des applications pour le système d\'exploitation Androïd.</br>Une interface graphique permet de déposer et d\'organiser des éléments et une interface de développement par blocs permet de programmer des actions.</br>Un émulateur disponible à l\'adresse <a href="https://sourceforge.net/projects/ai2u/" target="_blank">https://sourceforge.net/projects/ai2u/</a> permet de tester ses applications sans téléphone.</p></p>'
+            break
             default:
                 //Présentation ICN
                 newContent = contenuInit
             break
         }
-        $('#blocPage').html(newContent)
+		$('#blocPage').html(newContent)
 
         if(titre == 'Œuvre d\'art optique'){
             $('#blocPage').after('<script src="javascripts/traitementImage.js" id="scriptTraitementImage"></script>')
         } else {
             $('#scriptTraitementImage').remove()
         }
+		callback()
     }
 })
