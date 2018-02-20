@@ -12,7 +12,7 @@ html,body
 	/*sur les polices j'en mets plusieurs pour que le navigateur cherche la suivante s'il ne trouve pas la première
 	par ailleurs, j'ai mis des guillemets autour des polices qui contiennent une espace dans leur nom*/
 	background:url("images/bg1.gif"); /*Image téléchargée sur http://www.fontsquirrel.com/*/
-	height:99%;
+	/*height:99%;*/
 	width:100%;
 	margin:0px;
 	padding:0px;
@@ -25,6 +25,7 @@ nav ul
 #bloc_page
 {
 	width: 100%;
+	height:100%;
 	position:relative;
 }
 .sectioncolonne
@@ -98,14 +99,6 @@ section h2
 	height:60px;
 	/*margin-bottom:20px;*/
 }
-nav a:hover /* Apparence au survol des liens */
-{
-	color: rgb(170,0,170);
-}
-nav a:visited /* Apparence quand on a déjà cliqué sur le lien */
-{
-	color: rgb(180,180,180);
-}
 .choix_pedagogique
 {
 	font-weight:bold;
@@ -132,13 +125,22 @@ em
 }
 #bandeau
 {
-	float:left;
-	width:25%;
+	display:inline;
 	background-color:#999999;
 	border-radius:10px;
-	margin-right:20px;
-	min-height:170%;
-	position:relative;
+}
+#bandeauUl{
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align:center;
+    background-color: #999999;
+    border-radius:10px;
+    border: 2px solid #555;
+	color:blue;
+}
+#bandeau>nav>ul>li{
+	padding-bottom:1px;
 }
 .liste_module
 {
@@ -163,4 +165,12 @@ em
 }
 .imageDroite{
 	display:inline;
+}
+#blocPage
+{
+	height:100%;
+}
+.divCentree{
+	width:100%;
+	text-align:center;
 }
